@@ -45,13 +45,11 @@ class LoginForm extends Component {
 	}
 
 	submitLoginForm(e) {
-		e.preventDefault();
 		const fields = document.querySelectorAll('input');
 		this.validLoginForm(fields);
 	}
 
 	validLoginForm(fields) {
-		
 		
 		fields.forEach(field => {
 			
@@ -137,7 +135,11 @@ class LoginForm extends Component {
 
 				btnClass : this.btnClass
 			});
+
+
 		});
+
+		return true;
 	}
 
 
@@ -160,7 +162,6 @@ class LoginForm extends Component {
 							placeholder="Input email address"
 							id="inputEmail"
 							onChange={this.onChangeHandle}
-							required  
 						/>
 					</div>
 					<p className={this.state.emailErrorClass} id="emailError" >{this.state.emailErrorMessage}</p>
@@ -178,7 +179,6 @@ class LoginForm extends Component {
 							placeholder="Input password" 
 							id="inputPassword"
 							onChange={this.onChangeHandle}
-							required
 						/>
 					</div>
 					<p className={this.state.passwordErrorClass} id="passwordError" >{this.state.passwordErrorMessage}</p>
