@@ -124,8 +124,6 @@ class LoginForm extends Component {
 			}
 
 
-
-
 			this.setState({
 				emailErrorClass: this.emailClass,
 				emailErrorMessage : this.emailMessage,
